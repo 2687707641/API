@@ -29,21 +29,12 @@ Route::post('user/change_pwd','user/change_pwd');
 
 
 /************栏目管理*******************/
-
-// 添加栏目(添加分类)
-Route::post('cate/add','cate/cate_add');
-
-// 栏目列表(查询有哪些分类，以便于添加二级分类)
-Route::get('cate/list','cate/cate_list');
+// 添加栏目
+Route::post('cate/add','cate/add_cate');
 
 // 删除栏目
-Route::get('cate/del/:cate_id','cate/cate_delete');
+Route::get('cate/delete/:cate_id','cate/del_cate');
 
+/*************书籍管理**********************/
 
-/**************书籍管理**********************/
-
-//添加商品(书籍)
-Route::post('book/add','book/book_add');
-
-//查看该栏目下的所有书籍
-Route::get('book/book_list/:time/:cate_id','book/book_list'); 
+Route::post('book/add','book/add_book');
